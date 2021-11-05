@@ -99,10 +99,10 @@ In this project, you will build the reducer, actions and basic redux connects ne
 * Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
 
 ## Submission format
-* [ ] Submit via Codegrade by commiting and pushing any new changes to **your main branch.**
-* [ ] Check Codegrade before the deadline to compare its results against your local tests.
-* [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
-* [ ] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
+* [x] Submit via Codegrade by commiting and pushing any new changes to **your main branch.**
+* [x] Check Codegrade before the deadline to compare its results against your local tests.
+* [x] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
+* [x] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
 
 ## Interview Questions
 
@@ -110,8 +110,22 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What problem does the context API help solve?
 
+  Helps to avoid prop-drilling
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+  * action: the only source of information for an app, it carries a payload the info from the app to store.
+
+  * reducers: pure functions which are predictable. they are the only way to change state in redux.
+  * store: immutable object tree in redux, it holds the app's state
+  * the store known as a 'single source of truth': redux can have only single store in app, so all functionality is there, single source .
+
 
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
 
+  Thunk middleware allows you to write action creators that return a function instead of an action. It can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met.
+
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+ I liked Redux. I liked the way it functions. Redux allows to manage the app’s state in a single place and keep changes in the app more predictable and traceable. I liked the file organization. no need for prop-drilling, i have access to props in any file through connect.
+
